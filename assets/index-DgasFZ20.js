@@ -4,16 +4,19 @@
 
   function storedTrackingParams() {
     const params = new URLSearchParams();
+
     TRACKING_KEYS.forEach((key) => {
       const direct = localStorage.getItem("tracking_" + key);
       if (direct) params.set(key, direct);
     });
+
     Object.keys(localStorage).forEach((key) => {
       if (!key.startsWith("tracking_utm_")) return;
       const cleanKey = key.replace("tracking_", "");
       const value = localStorage.getItem(key);
       if (value) params.set(cleanKey, value);
     });
+
     return params;
   }
 
@@ -27,7 +30,7 @@
         tracking.forEach((value, key) => url.searchParams.set(key, value));
         link.href = url.toString();
       } catch (error) {
-        console.warn("Não foi possível aplicar UTMs ao checkout.", error);
+        console.warn("Nao foi possivel aplicar UTMs ao checkout.", error);
       }
     });
   }
@@ -61,13 +64,14 @@
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
         const opened = item.classList.toggle("open");
-        button.querySelector("span").textContent = opened ? "−" : "+";
+        button.querySelector("span").textContent = opened ? "-" : "+";
       });
     });
   }
 
   function setupRevealAnimation() {
     const elements = document.querySelectorAll(".reveal");
+
     if (!("IntersectionObserver" in window)) {
       elements.forEach((element) => element.classList.add("in-view"));
       return;

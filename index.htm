@@ -36,7 +36,7 @@
     a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
     document.head.appendChild(a);
   </script>
-  <link rel="stylesheet" href="assets/index-Bvz54woG.css">
+  <link rel="stylesheet" href="./assets/index-Bvz54woG.css" onerror="this.onerror=null;this.href='./index-Bvz54woG.css'">
 </head>
 <body>
   <noscript><img height="1" width="1" style="display:none" src="tr?id=973569155132883&ev=PageView&noscript=1" alt=""></noscript>
@@ -48,9 +48,9 @@
   </div>
 
   <nav class="nav">
-    <a class="brand" href="#top" aria-label="Kit Autismo e TDAH">
+    <a class="brand" href="#top" aria-label="Kit Autismo e TDAH Fora das Telas">
       <span class="brand-mark">∞</span>
-      <span>NeuroKids</span>
+      <span>Fora das Telas</span>
     </a>
     <div class="nav-links">
       <a href="#conteudo">Conteúdo</a>
@@ -63,13 +63,11 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow">Para pais, mães, professoras e terapeutas</p>
-        <h1>+1.000 atividades prontas para crianças com Autismo e TDAH saírem das telas</h1>
-        <p class="hero-subtitle">Um acervo visual, simples e organizado para trabalhar foco, rotina, emoções, coordenação, alfabetização e raciocínio sem ficar improvisando material todo dia.</p>
+        <p class="eyebrow">TEA + TDAH | material digital pronto</p>
+        <h1>Atividades prontas para tirar a criança da tela sem improvisar.</h1>
+        <p class="hero-subtitle">Receba um kit visual com +1.000 atividades, rotina, foco, emoções, coordenação e aprendizagem para aplicar em casa, na escola ou no atendimento.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#planos">Quero meu kit agora</a>
           <a class="btn ghost" href="#conteudo">Ver tudo que recebo</a>
@@ -80,29 +78,8 @@
           <span>Garantia 7 dias</span>
         </div>
       </div>
-      <div class="hero-visual reveal delay-1" aria-label="Prévia dos materiais do kit">
-        <div class="phone-frame">
-          <div class="screen">
-            <div class="screen-top">
-              <small>Kit Autismo & TDAH</small>
-              <strong>Fora das Telas</strong>
-            </div>
-            <div class="routine-card gold">
-              <span>Agora</span>
-              <b>Atividade de foco</b>
-            </div>
-            <div class="routine-card orange">
-              <span>Depois</span>
-              <b>Brincadeira sensorial</b>
-            </div>
-            <div class="activity-grid">
-              <i>ABC</i><i>1 2 3</i><i>😊</i><i>✋</i>
-            </div>
-            <div class="screen-cta">PDF pronto para imprimir</div>
-          </div>
-        </div>
-        <div class="floating-badge one">Rotina visual</div>
-        <div class="floating-badge two">Foco e atenção</div>
+      <div class="hero-visual product-shot reveal delay-1" aria-label="Mockup do Kit Autismo e TDAH Fora das Telas">
+        <img src="./assets/neurokids-mockup.png" alt="Mockup com capa do Kit Autismo e TDAH Fora das Telas, páginas de atividades e cartões de rotina visual">
       </div>
     </section>
 
@@ -158,6 +135,23 @@
         <article class="feature reveal"><b>Emoções e comportamento</b><span>Materiais para nomear sentimentos, escolhas e pequenas conquistas.</span></article>
         <article class="feature reveal"><b>Coordenação motora</b><span>Atividades de recorte, traçado, pintura, movimento e coordenação fina.</span></article>
         <article class="feature reveal"><b>Alfabetização e números</b><span>Letras, sílabas, contagem, lógica e atividades iniciais de aprendizagem.</span></article>
+      </div>
+      <div class="mockup-strip reveal" aria-label="Mockups de materiais inclusos">
+        <div class="mini-product gold-product">
+          <small>Manual</small>
+          <strong>Método 15 Minutos</strong>
+          <span>Aplicação rápida</span>
+        </div>
+        <div class="mini-product orange-product">
+          <small>Plano visual</small>
+          <strong>Virada Sem Tela</strong>
+          <span>Troca tela → atividade</span>
+        </div>
+        <div class="mini-product blue-product">
+          <small>Registro</small>
+          <strong>Mapa da Evolução</strong>
+          <span>Foco, rotina e progresso</span>
+        </div>
       </div>
     </section>
 
@@ -306,6 +300,22 @@
 
   <a class="whatsapp" href="https://wa.me/553799056159?text=Ol%C3%A1%21+Tenho+uma+d%C3%BAvida+sobre+o+Kit+Autismo+e+TDAH+Fora+das+Telas." target="_blank" rel="noopener noreferrer" aria-label="Suporte no WhatsApp">?</a>
 
-  <script src="assets/index-DgasFZ20.js"></script>
+  <script>
+    (function loadPageScript() {
+      const files = ["./assets/index-DgasFZ20.js", "./index-DgasFZ20.js"];
+      let current = 0;
+
+      function next() {
+        if (current >= files.length) return;
+        const script = document.createElement("script");
+        script.src = files[current++];
+        script.defer = true;
+        script.onerror = next;
+        document.body.appendChild(script);
+      }
+
+      next();
+    })();
+  </script>
 </body>
 </html>
