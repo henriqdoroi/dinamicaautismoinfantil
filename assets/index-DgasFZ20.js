@@ -151,7 +151,8 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function initPage() {
+    document.documentElement.classList.add("js-enabled");
     applyTrackingToCheckoutLinks();
     setupCountdown();
     setupFaq();
@@ -160,5 +161,11 @@
     setupSmoothCtas();
     setupYear();
     setupCheckoutEvents();
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPage, { once: true });
+  } else {
+    initPage();
+  }
 })();

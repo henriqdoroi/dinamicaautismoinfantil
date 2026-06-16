@@ -957,13 +957,14 @@ section {
   text-decoration: underline;
 }
 
-.reveal {
+.js-enabled .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity .7s ease, transform .7s ease;
 }
 
-.reveal.in-view {
+.reveal,
+.js-enabled .reveal.in-view {
   opacity: 1;
   transform: none;
 }
